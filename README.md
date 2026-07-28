@@ -1,2 +1,2 @@
-# javascript
-Learning JS from Beginner to Pro: youtu.be/EerdGm-ehJQ
+# JavaScript
+Learning JS from Beginner to Pro: https://www.youtube.com/watch?v=EerdGm-ehJQ
