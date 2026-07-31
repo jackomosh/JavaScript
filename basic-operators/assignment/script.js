@@ -45,3 +45,7 @@ n = n * 2
 let o = 2
 o += 5
 o *= 2 // the value of o is same
+
+let t = 2
+t *= 3 + 5
+alert(t) // 16, since 3+5 is executed then multiplied by 2
