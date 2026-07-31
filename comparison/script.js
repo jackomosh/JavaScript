@@ -8,3 +8,10 @@ alert(2 != 1); //Returns true
 
 let result = 5 > 4
 alert(result) // return true
+
+// String comparison - strings are compared letter by letter
+
+alert("z" < "a") // false
+alert("Glow" > "Jacomondi") // false
+alert("Bee" > "Be") // true
+
