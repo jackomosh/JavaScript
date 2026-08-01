@@ -44,3 +44,10 @@ alert("" == false) // true
 alert(0 === false) // false since 0 is a number and false is a boolean
 
 // comparison with null and undefined
+// for a strict equality check === these values are different
+
+alert(null === undefined) // false
+
+// For non strict or reqular equality theres a special rule
+
+alert(null == undefined) // true
