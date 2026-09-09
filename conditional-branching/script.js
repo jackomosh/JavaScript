@@ -12,7 +12,7 @@ if (team == "Spain") {
 let year = prompt("What year were you born", "")
 if (year < 1980) {
     alert("You are a baby boomer")
-} else if (year > 1995 && year < 2002) {
+} else if (year > 1999 && year < 2003) {
     alert("You are a Millenial")
 } else {
     alert("You are a GenZ")
@@ -29,7 +29,7 @@ if (age < 18) {
 }
 alert(accessAllowed)
 
-let number = prompt("Pick a number?", "") 
+let number = prompt("Pick a number?", "")
 if (number > 0) {
     alert(1)
 } else if (number < 0) {
@@ -37,3 +37,21 @@ if (number > 0) {
 } else (
     alert(0)
 )
+
+let str = prompt("What is the Official name of JavaScript?")
+
+if (str == "ECMAScript") {
+    alert("Right!")
+} else {
+    alert("You don't know ECMAScript!")
+}
+
+let value = prompt("Guess the number?")
+
+if (value > 0) {
+    alert(1)
+} else if (value < 0) {
+    alert(-1)
+} else {
+    alert(0)
+}
