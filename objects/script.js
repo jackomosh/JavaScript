@@ -22,3 +22,15 @@ let bag = {
 }
 
 alert(bag.apple)
+
+// Property value shorthand
+
+function makeUser(name, age) {
+    return {
+        name: name,
+        age: age,
+    }
+}
+
+let user1 = makeUser('Jack', 25)
+alert(user1.name)
