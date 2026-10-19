@@ -68,5 +68,5 @@ let codes = {
 };
 
 for (let code in codes) {
-    alert(code)
+    alert(+code)
 }
