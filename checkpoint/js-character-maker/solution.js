@@ -1,40 +1,40 @@
-
 function createCurriedCharacterCreator(initialCharacter) {
-    let character = { ...initialCharacter }
+  let character = { ...initialCharacter };
 
-    function deepMerge(target, source) {
-      for (let key in source) {
-        if (typeof source[key] === "object" && source[key] !== null && !Array.isArray(source[key])) {
-          if (typeof target[key] !== "object" || target[key] === null) {
-            target[key] = {};
-          }
-          deepMerge(target[key], source[key])
-        } else {
-          target[key] = source[key]
+  function deepMerge(target, source) {
+    for (let key in source) {
+      if (
+        typeof source[key] === "object" &&
+        source[key] !== null &&
+        !Array.isArray(source[key])
+      ) {
+        if (typeof target[key] !== "object" || target[key] === null) {
+          target[key] = {};
         }
+        deepMerge(target[key], source[key]);
+      } else {
+        target[key] = source[key];
       }
-      return target
+    }
+    return target;
+  }
+
+  function builder(...args) {
+    if (args.length == 0) {
+      return character;
     }
 
-    function builder(...args) {
-      if (args.length == 0) {
-        return character
+    for (let arg of args) {
+      if (typeof arg == "function") {
+        character = arg(character);
+      } else if (typeof arg === "object" && arg != null) {
+        character = deepMerge(character, arg);
       }
-
-      for (let arg of args) {
-        if (typeof arg == "function") {
-          character = arg(character)
-        } else if (typeof arg === "object" && arg != null) {
-          character = deepMerge(character, arg)
-        }
-      }
-      return builder
     }
-    return builder
+    return builder;
+  }
+  return builder;
 }
-
-
-
 
 const initialChar = {
   name: "Aria",
