@@ -1,10 +1,17 @@
 function reverseChunks(arr, chunkSize) {
+  
+
   for (let i = 0; i < arr.length; i += chunkSize) {
+
+    if (chunkSize <= 0) {
+      return arr;
+    }
+
     let left = i;
     let right = i + chunkSize - 1;
 
     if (right >= arr.length) {
-      right = arr.length - 1;
+      right = arr.length - 1
     }
 
     while (left < right) {
@@ -15,7 +22,7 @@ function reverseChunks(arr, chunkSize) {
     }
   }
   return arr;
-}
+};
 
 console.log(reverseChunks([1, 2, 3, 4, 5, 6, 7], 3));
 console.log(reverseChunks([10, 20, 30, 40, 50], 2));
