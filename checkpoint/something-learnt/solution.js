@@ -15,3 +15,21 @@ for (index in fruits) {
 for (fruit of fruits) {
     console.log(fruit)
 }
+
+// behaviour with objects
+
+const user = {
+    name: "John",
+    age: 25,
+};
+
+for (const key in user) {
+    console.log(key)
+    console.log(user[key])
+};
+
+// for...of here does not work since user is not iterable
+
+// for (const name of user) { 
+//     console.log(name)
+// }
