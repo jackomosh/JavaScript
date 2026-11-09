@@ -12,22 +12,16 @@
 function nestedArrayReverser(words) {
 
     if (!words || words.length === 0) {
-        return "";
+      return "";
+    };
+
+    let flatwords = words.flat();
+    let reversewords = [];
+
+    for (let i = flatwords.length- 1; i >= 0; i--) {
+      reversewords.push(flatwords[i])
     }
-
-    let result = "";
-
-    for (let i = words.length - 1; i >= 0; i--) {
-      let innerArray = words[i];
-
-      for (let j = innerArray.length - 1; j >= 0; j--) {
-        if (result !== "") {
-          result += " ";
-        }
-        result += innerArray[j]
-      }
-    }
-    return result
+    return reversewords.join(" ");
 };
 
 
