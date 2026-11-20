@@ -12,3 +12,6 @@ document.getElementById("demo").style.fontSize = "35px";
 
 // hide elemnts using JS
 document.getElementById("demo").style.display = "none";
+
+// show elements using css display property block
+document.getElementById("demo").style.display = "block";
