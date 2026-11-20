@@ -6,7 +6,3 @@
 // getElementbyId
 
 document.getElementById("demo").innerHTML = "Hello Javascript"; // changes jack to JavaScript on the html page
-
-
-
-
