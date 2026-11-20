@@ -9,3 +9,6 @@ document.getElementById("demo").innerHTML = "Hello Javascript"; // changes jack 
 
 // change CSS style elements using JS 
 document.getElementById("demo").style.fontSize = "35px";
+
+// hide elemnts using JS
+document.getElementById("demo").style.display = "none";
