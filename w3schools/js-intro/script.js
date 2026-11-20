@@ -6,3 +6,6 @@
 // getElementbyId
 
 document.getElementById("demo").innerHTML = "Hello Javascript"; // changes jack to JavaScript on the html page
+
+// change CSS style elements using JS 
+document.getElementById("demo").style.fontSize = "35px";
